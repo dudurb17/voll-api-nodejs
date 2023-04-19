@@ -16,6 +16,7 @@ import errorMiddleware from './error/errorMiddleware.js'
 
 dotenv.config({ path: '.env' })
 
+const PORT = process.env.SERVER_PORT || 3000
 const app = express()
 
 const corsOpts = {
@@ -53,7 +54,7 @@ rotaAuth(app)
 app.use(errorMiddleware)
 
 // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-app.listen(process.env.SERVER_PORT, () => { console.log(`server running on port ${process.env.SERVER_PORT}`) }
+app.listen(PORT, () => { console.log(`server running on port ${PORT}`) }
 )
 
 export default app
