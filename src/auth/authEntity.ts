@@ -13,6 +13,7 @@ import { Paciente } from '../pacientes/pacienteEntity.js'
   `
 })
 
+//teste
 export class Autenticaveis implements IAutenticavel {
   @ViewColumn()
     id: string
